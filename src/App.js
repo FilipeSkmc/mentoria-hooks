@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import FormBasic from './components/FormBasic';
 import './App.css';
+import FormBasic from './components/FormBasic';
 import FetchRick from './components/FetchRick';
 
 function App() {
@@ -14,8 +14,8 @@ function App() {
       <button onClick={ () => setMode(!mode) }>
         {mode ? 'Agora apague!' : 'Que haja Luz!'}
       </button>
-
-      { mode ? <FormBasic /> : <FetchRick /> }
+      <FormBasic />
+      <FetchRick />
     </div>
   );
 }
