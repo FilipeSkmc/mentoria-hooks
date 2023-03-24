@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 const MIN = 3;
 
@@ -9,18 +9,9 @@ function FormBasic() {
     email: '',
   });
 
-  /** parte 2 */
-  const [disabled, setDisabled] = useState(true);
-  /** parte 2 */
-  useEffect(() => {
-    function enableButton() {
-      const condition = (
-        formData.name.length < MIN || !formData.email.includes('@')
-      );
-      setDisabled(condition);
-    }
-    enableButton();
-  }, [formData]);
+  const condition = (
+    formData.name.length < MIN || !formData.email.includes('@')
+  );
 
   /** parte 1 */
   function handleInputChange({ target: { name, value } }) {
@@ -55,7 +46,7 @@ function FormBasic() {
         </label>
         <br />
         <button
-          disabled={ disabled }
+          disabled={ condition }
         >
           Enviar
         </button>

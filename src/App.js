@@ -17,7 +17,7 @@ function App() {
         {mode ? 'Agora apague!' : 'Que haja Luz!'}
       </button>
       {/* parte 1 */}
-      <EffectSimulator />
+      { !mode && <EffectSimulator />}
       {/* parte 2 */}
       <FormBasic />
       {/* parte 3 */}
