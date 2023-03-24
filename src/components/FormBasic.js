@@ -3,17 +3,22 @@ import React, { useState } from 'react';
 const MIN = 3;
 
 function FormBasic() {
-  /** parte 1 */
+  /** montando o estado como object */
   const [formData, setFormData] = useState({
     name: '',
     email: '',
   });
 
+  /** constante que realiza a desabilita o botão */
   const condition = (
     formData.name.length < MIN || !formData.email.includes('@')
   );
 
-  /** parte 1 */
+  /**
+   * Função que realiza a mudança no estado
+   * detalhe no espalhamento, que é necessário para manter
+   * os dados que já foram inseridos.
+   */
   function handleInputChange({ target: { name, value } }) {
     setFormData({
       ...formData,

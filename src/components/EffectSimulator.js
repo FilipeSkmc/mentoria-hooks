@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 function EffectSimulator() {
   const [stateA, setStateA] = useState(0);
   const [stateB, setStateB] = useState(0);
-  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     console.log('Sou o efeito sem array de depencencias, olhem pra mim!');
@@ -15,7 +14,7 @@ function EffectSimulator() {
     );
 
     return () => {
-      console.log('Componente desmontou');
+      console.log('Componente desmontou? Executei!');
     };
   }, []);
 
@@ -44,11 +43,6 @@ function EffectSimulator() {
       >
         { `State B: ${stateB}` }
       </button>
-      { visible && (
-        <button onClick={ () => setVisible(false) }>
-          To visivel
-        </button>
-      ) }
     </div>
   );
 }

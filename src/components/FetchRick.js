@@ -5,7 +5,6 @@ function FetchRick() {
   const [characters, setCharacters] = useState({});
   const [loading, setLoading] = useState(true);
 
-  /** parte 2 */
   useEffect(() => {
     getCharacters()
       .then((data) => {
