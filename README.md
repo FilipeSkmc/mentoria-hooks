@@ -5,6 +5,7 @@
 ### Effect Simulator
 
 Simula os efeitos de ciclo de vida com useEffect.
+  Para simular o efeito de desmontagem, deve clicar no botão 'Que haja Luz!'
 
 ### FetchRick
 
@@ -12,4 +13,4 @@ Requisição de API para renderizar no componente com useEffect
 
 ### FormBasic
 
-Controlando useState com objeto com dados de um formulário, habilitando botão.
+Controlando estado no formato de objeto, com dados de um formulário, com validação simples.
