@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import './App.css';
 import EffectCounter from './components/EffectCounter';
+import EffectSimulator from './components/EffectSimulator';
+import FetchRick from './components/FetchRick';
+import FormBasic from './components/FormBasic';
 
 function App() {
   const [mode, setMode] = useState(true);
@@ -13,8 +16,10 @@ function App() {
       <button onClick={ () => setMode(!mode) }>
         { mode ? 'Agora apague!' : 'Que haja Luix!'}
       </button>
-
+      <FormBasic />
+      { mode && <EffectSimulator />}
       { mode && <EffectCounter />}
+      <FetchRick />
     </div>
   );
 }
