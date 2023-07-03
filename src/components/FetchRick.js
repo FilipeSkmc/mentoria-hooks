@@ -19,13 +19,13 @@ function FetchRick() {
 
   useEffect(() => {
     // função assincrona que faz a requisição a API e atribui valores aos estados
-    const getDataApi = async () => {
+    const fetchCharacters = async () => {
       const data = await getCharacters();
       setCharacters(data);
       setLoading(false);
     };
     // chama a função para ser executada
-    getDataApi();
+    fetchCharacters();
   }, []);
 
   // elemento de loading
