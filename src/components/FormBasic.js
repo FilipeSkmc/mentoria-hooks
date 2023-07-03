@@ -9,7 +9,7 @@ function FormBasic() {
     email: '',
   });
 
-  /** constante que realiza a desabilita o botão */
+  /** constante que habilita e desabilita o botão */
   const condition = (
     formData.name.length < MIN || !formData.email.includes('@')
   );
