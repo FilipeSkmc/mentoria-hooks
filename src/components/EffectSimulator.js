@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+const FIVE = 5;
+
 function EffectSimulator() {
   const [stateA, setStateA] = useState(0);
   const [stateB, setStateB] = useState(0);
@@ -12,10 +14,6 @@ function EffectSimulator() {
     console.log(
       'Sou o efeito com array de depencencias vazio, executo quando o componente',
     );
-
-    return () => {
-      console.log('Componente desmontou? Executei!');
-    };
   }, []);
 
   useEffect(() => {
@@ -39,7 +37,7 @@ function EffectSimulator() {
         { `State A: ${stateA}` }
       </button>
       <button
-        onClick={ () => setStateB(stateB + 1) }
+        onClick={ () => setStateB(stateB + FIVE) }
       >
         { `State B: ${stateB}` }
       </button>

@@ -1,5 +1,5 @@
 {
-  "name": "mentoria-hooks",
+  "name": "jedi-funcional",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,14 +19,12 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app"
+      "react-app",
+      "react-app/jest"
     ]
   },
   "devDependencies": {
-    "@trybe/eslint-config-frontend": "^1.7.1",
-    "stylelint": "^14.16.1",
-    "stylelint-config-standard": "28.0.0",
-    "stylelint-order": "^5.0.0"
+    "@trybe/eslint-config-frontend": "^1.7.1"
   },
   "browserslist": {
     "production": [

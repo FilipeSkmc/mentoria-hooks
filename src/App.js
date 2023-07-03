@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import './App.css';
-import FormBasic from './components/FormBasic';
-import FetchRick from './components/FetchRick';
-import EffectSimulator from './components/EffectSimulator';
+import EffectCounter from './components/EffectCounter';
 
 function App() {
-  const [mode, setMode] = useState(false);
+  const [mode, setMode] = useState(true);
 
   return (
     <div className={ `App-${mode ? 'light' : 'dark'}` }>
@@ -13,14 +11,10 @@ function App() {
 
       <p>Controlando o state individual</p>
       <button onClick={ () => setMode(!mode) }>
-        {mode ? 'Agora apague!' : 'Que haja Luz!'}
+        { mode ? 'Agora apague!' : 'Que haja Luix!'}
       </button>
 
-      { !mode && <EffectSimulator />}
-
-      <FormBasic />
-
-      <FetchRick />
+      { mode && <EffectCounter />}
     </div>
   );
 }
